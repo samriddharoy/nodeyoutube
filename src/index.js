@@ -1,8 +1,9 @@
 import dotenv from "dotenv";
 import conn from "./db/connection.js";
 import express from "express";
+import {app} from "./app.js";
 
-const app = express();
+
 
 // Load environment variables
 dotenv.config();
