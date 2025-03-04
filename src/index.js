@@ -1,4 +1,7 @@
 import dotenv from "dotenv";
+
+dotenv.config({ path: "./.env" });
+
 import conn from "./db/connection.js";
 import express from "express";
 import {app} from "./app.js";
@@ -6,7 +9,8 @@ import {app} from "./app.js";
 
 
 // Load environment variables
-dotenv.config();
+console.log("Loaded ENV PORT:", process.env.PORT);  // Debugging log
+
 
 // Establish Database Connection
 conn()
